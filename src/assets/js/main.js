@@ -11,19 +11,19 @@ function handleLoadData() {
 
   renderPosts(responseData);
 }
-
 function renderPosts(posts) {
   const template = posts
     .map((post) => {
       return `
-            <div>
-            <h2>${post.title}</h2>
-            <p>${post.body}</p>
-        
-            </div>
-            
-            `;
+  <div>
+  <h2>${post.title}</h2>
+  <p>${post.body}</p>
+  </div>
+  `;
     })
     .join("");
-  document.body.innerHTML = template;
+
+    document.body.innerHTML = template
 }
+
+
