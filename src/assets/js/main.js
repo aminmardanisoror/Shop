@@ -1,16 +1,33 @@
-const req = new XMLHttpRequest();
+let reqComments;
+const reqPosts = new XMLHttpRequest();
 
-req.open("GET", "https://jsonplaceholder.typicode.com/posts");
+reqPosts.open("GET", "https://jsonplaceholder.typicode.com/posts");
 
-req.addEventListener("load", handleLoadData);
+reqPosts.addEventListener("load", handleLoadPosts);
 
-req.send();
+reqPosts.send();
 
-function handleLoadData() {
-  let responseData = JSON.parse(req.responseText);
+function handleLoadPosts() {
+  reqComments = new XMLHttpRequest();
+  reqComments.open("GET", "https://jsonplaceholder.typicode.com/comments");
+  reqComments.addEventListener("load", handleLoadComments);
+  reqComments.send();
 
+
+  let responseData = JSON.parse(reqPosts.responseText);
   renderPosts(responseData);
 }
+
+const handleLoadComments = () => {
+  const commentData = JSON.parse(reqComments.responseText);
+  console.log(commentData);
+  
+};
+
+function renderComments(comment) {}
+
+
+
 function renderPosts(posts) {
   const template = posts
     .map((post) => {
@@ -23,7 +40,24 @@ function renderPosts(posts) {
     })
     .join("");
 
-    document.body.innerHTML = template
+  document.body.innerHTML = template;
 }
 
+// class Car {
+//   constructor(brand, color) {
+//     this.brand = brand;
+//     this.color = color;
+//   }
+// changeColor(newColor){
+//   this.color = newColor
+// }
 
+// }
+
+// const newredCar = new Car("saipa", "red");
+// const newBlueCar = new Car("BMW", "blue");
+
+// newBlueCar.changeColor('white')
+
+// console.log(newredCar);
+// console.log(newBlueCar);
