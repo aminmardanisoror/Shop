@@ -49,18 +49,22 @@ function renderPosts(posts) {
       console.log(post.comments);
 
       return `
-  <div>
+  <div class="post">
   <h2>${post.title}</h2>
   <p>${post.body}</p>
   <div class="comments-container">
-  ${post.comments
-    .map((comment) => {
-      return `
-    <div>${comment.body}</div>
+  ${
+    post.comments
+      ? post.comments
+          .map((comment) => {
+            return `
+    <div class="comment">${comment.body}</div>
     
     `;
-    })
-    .join("-")}
+          })
+          .join("")
+      : ""
+  }
   </div>
 
   </div>
