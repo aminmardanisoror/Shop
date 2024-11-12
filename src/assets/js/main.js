@@ -46,7 +46,7 @@ function renderComments(comment) {}
 function renderPosts(posts) {
   const template = posts
     .map((post) => {
-      console.log(post.comments);
+      // console.log(post.comments);
 
       return `
   <div class="post">
