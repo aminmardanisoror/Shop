@@ -16,3 +16,15 @@ padding: 8px;
   border: 1px solid gray;
   
 }
+
+.p-card {
+width: 4px 0;
+max-width: 500px;
+box-shadow: 4px 4px 4px rgb(186, 186, 186);
+border-radius: 8px ;
+overflow: hidden;
+}
+
+.p-card img {
+  width: 100%;
+}
