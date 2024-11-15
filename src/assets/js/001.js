@@ -31,24 +31,26 @@
 
 //   })
 // ================================================
-const root = document.getElementById('root')
+const root = document.getElementById("root");
 
 fetch("https://fakestoreapi.com/products")
   .then((res) => res.json())
-  .then((json) => console.log(json))
-  .catch((error) => console.log("error", error));
+  .then((json) => render(json))
+  .catch((error) => console.log('error', error));
 
 function render(products) {
-  const template = products.map((product) => {
-    return `
+  const template = products
+    .map((product) => {
+      return `
 <div class="p-card">
-<img src="${image}" width="300px">
+<img src="${product.image}" width="300px" />
 <h2>${product.title}</h2>
 </div>
 
 
 `;
-  }).join('');
+    })
+    .join("");
 
-  root.innerHTML = template
+    root.innerHTML = template;
 }
