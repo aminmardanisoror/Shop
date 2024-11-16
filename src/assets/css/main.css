@@ -1,31 +1,7 @@
-/*# sourceMappingURL=main.css.map */
-.comments-container {
-border:1px solid gray ;
-border-radius: 8px;
-padding: 8px;
-}
-.post {
-  background-color: antiquewhite;
-  border-radius: 8px;
-  padding: 8px;
-
-}
-
-.comment {
-  margin:  4px 0;
-  border: 1px solid gray;
-  
-}
-
-.p-card {
-width: 4px 0;
-max-width: 500px;
-box-shadow: 4px 4px 4px rgb(186, 186, 186);
-border-radius: 8px ;
-overflow: hidden;
-}
-
-.p-card img {
-  width: 100%; 
-}
-
+.header {
+  background: url(../imgs/bg.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  background-attachment: fixed;
+}/*# sourceMappingURL=main.css.map */
