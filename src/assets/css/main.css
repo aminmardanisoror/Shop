@@ -1,7 +1,11 @@
 .header {
   background: url(../imgs/bg.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: 47%;
   height: 100vh;
   background-attachment: fixed;
+}
+
+.products__container__explain {
+  background-color: #3f464f;
 }/*# sourceMappingURL=main.css.map */

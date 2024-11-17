@@ -42,11 +42,22 @@ function render(products) {
   const template = products
     .map((product) => {
       return `
-<div class="p-card">
-<img src="${product.image}" width="300px" />
-<h2>${product.title}</h2>
-</div>
 
+<div class="products text-center mt-5">
+      <div
+        class="shadow-md overflow-hidden border rounded-lg border-black  pt-4 products__container w-10/12 mx-auto flex flex-col gap-16"
+      >
+      
+        <img class="w-full aspect-square object-contain " src="${product.image}" alt="" />
+      
+        <div class="flex flex-col gap-5 products__container__explain pb-8 pt-4 shadow-md">
+        <span class="ms-3 w-fit text-white ">Price: ${product.price} $</span>
+        <span class="ms-3 w-fit text-white">Rate: ${product.rating.rate}</span>
+        <h2 class="ms-3 w-fit text-start text-white">${product.title}</h2>
+        <a class="border ms-3 px-4 py-2 w-fit rounded-xl text-black bg-white text-sm" href="">buy now</a>
+        </div>
+      </div>
+    </div>
 
 `;
     })

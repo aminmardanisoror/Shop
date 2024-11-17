@@ -93,3 +93,9 @@ function renderPosts(posts) {
 
 // console.log(newredCar);
 // console.log(newBlueCar);
+// ============================================
+
+{/* <div class="p-card">
+<img src="${product.image}" width="300px" />
+<h2>${product.title}</h2>
+</div> */}
