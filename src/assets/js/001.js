@@ -36,14 +36,15 @@ const root = document.getElementById("root");
 fetch("https://fakestoreapi.com/products")
   .then((res) => res.json())
   .then((json) => render(json))
-  .catch((error) => console.log('error', error));
+  .catch((error) => console.log("error", error));
 
 function render(products) {
   const template = products
     .map((product) => {
       return `
 
-<div class="products text-center mt-5">
+<div class="products text-center mt-5 grid grid-cols-2">
+
       <div
         class="shadow-md overflow-hidden border rounded-lg border-black  pt-4 products__container w-10/12 mx-auto flex flex-col gap-16"
       >
@@ -57,11 +58,12 @@ function render(products) {
         <a class="border ms-3 px-4 py-2 w-fit rounded-xl text-black bg-white text-sm" href="">buy now</a>
         </div>
       </div>
+      
     </div>
 
 `;
     })
     .join("");
 
-    root.innerHTML = template;
+  root.innerHTML = template;
 }

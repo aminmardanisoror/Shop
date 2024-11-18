@@ -22,14 +22,34 @@
         <div class="header__container__navbar flex justify-between px-4 py-3">
           <img class="" src="./assets/imgs/logo.svg" alt="" />
           <i class="bi bi-list text-3xl md:hidden"></i>
+          <div class="hidden md:flex gap-1 text-xl">
+            <div class="flex gap-6 font-bold">
+              <a href="">Demos</a>
+              <a href="">Features</a>
+              <a href="">Shop</a>
+              <a href="">Product</a>
+              <a href="">Product Type</a>
+              <a href="">Buy Now</a>
+            </div>
+          </div>
         </div>
+
+
         <div
-          class="header__container__navbar flex justify-center flex-col w-8/12 mt-44 ms-32 gap-8"
+          class="header__container__explain flex justify-center flex-col w-8/12 mt-44   gap-8 "
         >
+          <img class="w-16 hidden md:block" src="./assets/imgs/magento.png" alt="" />
           <span class="font-bold">SUPRO</span>
           <h4 class="font-extrabold text-2xl">
             Minimalist AJAX eCommerce Magento 2 Theme
           </h4>
+          <p class="hidden md:block">
+            With design minimal and focus on products, Supro will make your
+            online store look more impressive and attractive to viewers. This
+            theme is suited for a lot of e-commerce website such as fashion
+            store, furniture store, decoration store, etc.
+          </p>
+          <p class="hidden md:block">COMPATIBLE WITH MAGENTO 2.2.x, 2.3.x, 2.4.x</p>
         </div>
       </div>
     </header>
@@ -37,7 +57,7 @@
     mid
     === -->
     <div class="mid my-16">
-      <div class="mid__container w-10/12 mx-auto flex flex-col gap-10">
+      <div class="mid__container w-10/12 mx-auto grid  gap-10 md:grid-cols-2 lg:grid-cols-4">
         <div class="flex flex-col gap-5">
           <h2 class="font-bold text-xl w-2/3">Front-End CMS Page Builder</h2>
           <p class="font-thin text-sm">
@@ -79,5 +99,88 @@
       </div>
     </div>
     <div id="root"></div>
+
+    <!-- ===
+    footer
+    === -->
+
+    <div class="footer bg-zinc-800 text-white mt-10">
+      <div class="footer__container container w-11/12 mx-auto pt-6 pb-16">
+        <div class="flex flex-col gap-4">
+          <h3 class="text-2xl">Location</h3>
+          <p class="footclr">
+            We would love to serve you and let you enjoy our culinary
+            experience, you can find us at —
+          </p>
+        </div>
+        <div class="flex flex-col mt-2 footclr">
+          <span>Strandgade 93</span>
+          <span>DK-1401 Copenhagen</span>
+          <span>Denmark</span>
+        </div>
+        <div class="mt-20">
+          <div>
+            <span class="footclr">Tel:</span>
+            <span>+45 1245 9831</span>
+          </div>
+          <div>
+            <span class="footclr">E-mail: </span>
+            <a href="">info@kaliumtheme.com</a>
+          </div>
+          <div class="flex gap-6 mt-6">
+            <i class="bi bi-instagram"></i>
+            <i class="bi bi-yelp"></i>
+            <i class="bi bi-app-indicator"></i>
+            <i class="bi bi-stripe"></i>
+          </div>
+        </div>
+        <div class="mt-10 flex flex-col gap-4">
+          <div class="text-2xl">Opening times</div>
+          <div class="flex justify-between">
+            <span class="footclr">Monday — Thursday</span>
+            <span>10:10 - 23:00</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="footclr">Friday — Sunday</span>
+            <span>10:10 - 19:00</span>
+          </div>
+          <div><a href="">Make a reservation!</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==============================?
+      -->
+
+      <div class="products text-center mt-5 grid grid-cols-2">
+
+        <div
+          class="shadow-md overflow-hidden border rounded-lg border-black  pt-4 products__container w-10/12 mx-auto flex flex-col gap-16"
+        >
+        
+          <img class="w-full aspect-square object-contain " src="${product.image}" alt="" />
+        
+          <div class="flex flex-col gap-5 products__container__explain pb-8 pt-4 shadow-md">
+          <span class="ms-3 w-fit text-white ">Price: ${product.price} $</span>
+          <span class="ms-3 w-fit text-white">Rate: ${product.rating.rate}</span>
+          <h2 class="ms-3 w-fit text-start text-white">${product.title}</h2>
+          <a class="border ms-3 px-4 py-2 w-fit rounded-xl text-black bg-white text-sm" href="">buy now</a>
+          </div>
+        </div>
+        <div
+          class="shadow-md overflow-hidden border rounded-lg border-black  pt-4 products__container w-10/12 mx-auto flex flex-col gap-16"
+        >
+        
+          <img class="w-full aspect-square object-contain " src="${product.image}" alt="" />
+        
+          <div class="flex flex-col gap-5 products__container__explain pb-8 pt-4 shadow-md">
+          <span class="ms-3 w-fit text-white ">Price: ${product.price} $</span>
+          <span class="ms-3 w-fit text-white">Rate: ${product.rating.rate}</span>
+          <h2 class="ms-3 w-fit text-start text-white">${product.title}</h2>
+          <a class="border ms-3 px-4 py-2 w-fit rounded-xl text-black bg-white text-sm" href="">buy now</a>
+          </div>
+        </div>
+        
+      </div>
   </body>
 </html>
