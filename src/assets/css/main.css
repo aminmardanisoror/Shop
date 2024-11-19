@@ -11,7 +11,7 @@
   height: 100vh;
   background-attachment: fixed;
 }
-ba .header__container {
+.header__container {
   max-width: 1280px;
   margin-left: auto;
   margin-right: auto;
@@ -19,7 +19,12 @@ ba .header__container {
 
 #root {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
+}
+@media screen and (min-width: 768px) {
+  #root {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 @media screen and (min-width: 1280px) {
   #root {
