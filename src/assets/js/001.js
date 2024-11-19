@@ -43,10 +43,10 @@ function render(products) {
     .map((product) => {
       return `
 
-<div class="products text-center mt-5 grid grid-cols-2">
+<div class="products text-center mt-5 ">
 
       <div
-        class="shadow-md overflow-hidden border rounded-lg border-black  pt-4 products__container w-10/12 mx-auto flex flex-col gap-16"
+        class="shadow-md h-[100%] overflow-hidden border rounded-lg border-black  pt-4 products__container w-10/12 mx-auto flex flex-col gap-16"
       >
       
         <img class="w-full aspect-square object-contain " src="${product.image}" alt="" />

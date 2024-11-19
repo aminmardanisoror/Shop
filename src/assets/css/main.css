@@ -1,16 +1,33 @@
-.header {
-  background: url(../imgs/bg.jpg);
-  background-size: cover;
-  background-position: 47%;
-  height: 100vh;
-  background-attachment: fixed;
-}
-.header__container {
+.maxContainer {
   max-width: 1280px;
   margin-left: auto;
   margin-right: auto;
 }
 
+.header {
+  background: url(../imgs/bg.jpg);
+  background-size: cover;
+  background-position: 55%;
+  height: 100vh;
+  background-attachment: fixed;
+}
+ba .header__container {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#root {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media screen and (min-width: 1280px) {
+  #root {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 .products__container__explain {
   background-color: #3f464f;
+  height: 100%;
 }/*# sourceMappingURL=main.css.map */

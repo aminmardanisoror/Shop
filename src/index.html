@@ -17,9 +17,11 @@
     <!-- ===
     header
     === -->
-    <header class="header">
-      <div class="header__container">
-        <div class="header__container__navbar flex justify-between px-4 py-3">
+    <header class="header ">
+      <div class="maxContainer ">
+        <div
+          class="header__container__navbar flex justify-between px-4 py-3 maxContainer"
+        >
           <img class="" src="./assets/imgs/logo.svg" alt="" />
           <i class="bi bi-list text-3xl md:hidden"></i>
           <div class="hidden md:flex gap-1 text-xl">
@@ -34,13 +36,16 @@
           </div>
         </div>
 
-
         <div
-          class="header__container__explain flex justify-center flex-col w-8/12 mt-44   gap-8 "
+          class="header__container__explain flex flex-col gap-10 max-w-md mt-56 md:mt-44 ms-5"
         >
-          <img class="w-16 hidden md:block" src="./assets/imgs/magento.png" alt="" />
-          <span class="font-bold">SUPRO</span>
-          <h4 class="font-extrabold text-2xl">
+          <img
+            class="w-16 hidden md:block"
+            src="./assets/imgs/magento.png"
+            alt=""
+          />
+          <span class="font-bold ">SUPRO</span>
+          <h4 class="font-extrabold text-2xl ">
             Minimalist AJAX eCommerce Magento 2 Theme
           </h4>
           <p class="hidden md:block">
@@ -49,7 +54,9 @@
             theme is suited for a lot of e-commerce website such as fashion
             store, furniture store, decoration store, etc.
           </p>
-          <p class="hidden md:block">COMPATIBLE WITH MAGENTO 2.2.x, 2.3.x, 2.4.x</p>
+          <p class="hidden md:block">
+            COMPATIBLE WITH MAGENTO 2.2.x, 2.3.x, 2.4.x
+          </p>
         </div>
       </div>
     </header>
@@ -57,7 +64,9 @@
     mid
     === -->
     <div class="mid my-16">
-      <div class="mid__container w-10/12 mx-auto grid  gap-10 md:grid-cols-2 lg:grid-cols-4">
+      <div
+        class="mid__container maxContainer w-10/12 mx-auto grid gap-10 md:grid-cols-2 lg:grid-cols-4"
+      >
         <div class="flex flex-col gap-5">
           <h2 class="font-bold text-xl w-2/3">Front-End CMS Page Builder</h2>
           <p class="font-thin text-sm">
@@ -90,22 +99,24 @@
     products
     === -->
     <div class="productTitle text-center mt-36">
-      <div class="productTitle__container w-10/12 mx-auto flex flex-col gap-6">
+      <div
+        class="productTitle__container maxContainer w-10/12 mx-auto flex flex-col gap-6"
+      >
         <h2 class="text-2xl font-bold">20 Unique Products</h2>
         <p class="text-sm text-center">
           Supro created many concepts with morden & minimal design, focus on
           product. You can easy to customize it for any store online
         </p>
+        <div id="root"></div>
       </div>
     </div>
-    <div id="root"></div>
 
     <!-- ===
     footer
     === -->
 
     <div class="footer bg-zinc-800 text-white mt-10">
-      <div class="footer__container container w-11/12 mx-auto pt-6 pb-16">
+      <div class="footer__container w-11/12 mx-auto pt-6 pb-16 maxContainer">
         <div class="flex flex-col gap-4">
           <h3 class="text-2xl">Location</h3>
           <p class="footclr">
@@ -148,39 +159,5 @@
         </div>
       </div>
     </div>
-
-    <!-- ==============================?
-      -->
-
-      <div class="products text-center mt-5 grid grid-cols-2">
-
-        <div
-          class="shadow-md overflow-hidden border rounded-lg border-black  pt-4 products__container w-10/12 mx-auto flex flex-col gap-16"
-        >
-        
-          <img class="w-full aspect-square object-contain " src="${product.image}" alt="" />
-        
-          <div class="flex flex-col gap-5 products__container__explain pb-8 pt-4 shadow-md">
-          <span class="ms-3 w-fit text-white ">Price: ${product.price} $</span>
-          <span class="ms-3 w-fit text-white">Rate: ${product.rating.rate}</span>
-          <h2 class="ms-3 w-fit text-start text-white">${product.title}</h2>
-          <a class="border ms-3 px-4 py-2 w-fit rounded-xl text-black bg-white text-sm" href="">buy now</a>
-          </div>
-        </div>
-        <div
-          class="shadow-md overflow-hidden border rounded-lg border-black  pt-4 products__container w-10/12 mx-auto flex flex-col gap-16"
-        >
-        
-          <img class="w-full aspect-square object-contain " src="${product.image}" alt="" />
-        
-          <div class="flex flex-col gap-5 products__container__explain pb-8 pt-4 shadow-md">
-          <span class="ms-3 w-fit text-white ">Price: ${product.price} $</span>
-          <span class="ms-3 w-fit text-white">Rate: ${product.rating.rate}</span>
-          <h2 class="ms-3 w-fit text-start text-white">${product.title}</h2>
-          <a class="border ms-3 px-4 py-2 w-fit rounded-xl text-black bg-white text-sm" href="">buy now</a>
-          </div>
-        </div>
-        
-      </div>
   </body>
 </html>
